@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>忘记密码</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style type="text/css">
+        .forgot{
+            width: 100%;
+            height: 618px;
+            background: url("./img/bg3.jpg") center center;
+            background-size: cover;
+        }
+        .forgot h1{
+            text-align: center;
+        }
+        .forgot .form{
+            margin-top: 10px;
+            border: 1px solid #5e5e5e;
+            border-radius: 10px;
+            width: 340px;
+            height: 300px;
+        }
+        .forgot footer{
+            font-size: 12px;
+            padding-top: 230px;
+        }
+    </style>
+</head>
+<body class="forgot">
+<header>
+    <h1>&nbsp;&nbsp;欢迎来到剧院票务管理系统&nbsp;&nbsp;<small>156工作室</small></h1>
+</header>
+<div class="contain">
+    <div class="log row">
+        <div class="col-md-3 col-md-push-5 form">
+            <form class="">
+                <h2>忘记密码</h2>
+                <div class="form-group">
+                    <div class="alert alert-success" role="alert">您的电子邮件即将发送.</div>
+                </div>
+                <div class="form-group">
+                    <label  style="font-size: 15px;">邮箱</label>
+                    <input type="email" class="email form-control" placeholder="请输入邮箱">
+                </div>
+                <div class="form-group">
+                    <p><a href="log_in.html" style="color: #1b6d85">登录</a> 或者 <a href="sign_up.html" style="color: #1b6d85">注册</a></p>
+                </div>
+                <div class="form-group">
+                    <input type="button" value="发送邮件" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <p><small>&copy;西安邮电大学计算机学院软件工程1505班<a>156工作室</a></small></p>
+        </div>
+    </div>
+</footer>
+<script>
+    var oInput=document.getElementsByClassName('btn')[0];
+    var oEmail=document.getElementsByClassName('email')[0];
+    oInput.onclick=function () {
+        if(oEmail.value!=''){
+            alert("您的邮件已经成功发送!");
+            window.location.href="log_in.html";
+        }
+    }
+</script>
+</body>
+</html>
